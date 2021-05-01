@@ -1,4 +1,5 @@
 import './Feed.css'
+import MessageSender from './MessageSender'
 import Reels from './Reels'
 
 function Feed() {
@@ -8,6 +9,7 @@ function Feed() {
             <Reels />
 
             {/* Message Sender */}
+            <MessageSender />
         </div>
     )
 }
