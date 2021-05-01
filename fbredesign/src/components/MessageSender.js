@@ -3,11 +3,17 @@ import './MessageSender.css'
 import VideocamIcon from '@material-ui/icons/Videocam';
 import PhotoLibraryIcon from '@material-ui/icons/PhotoLibrary';
 import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon';
+import { useState } from 'react';
 
 function MessageSender() {
+    const [input, setInput] = useState('')
+    const [imageUrl, setImageUrl] = useState('')
   
     const handleSubmit = (e) => {
         e.preventDefault();
+
+        setInput('') 
+        setImageUrl('')
     } 
  
 
@@ -18,9 +24,13 @@ function MessageSender() {
 
                 <form>
                     <input 
+                     value={input}
+                     onChange={e => setInput(e.target.value)}
                      className='messageSender__input'
                      placeholder={`What's on your name`} />
                     <input
+                     value={imageUrl}
+                     onChange={e => setImageUrl(e.target.value)}
                      placeholder='image URL (optional)'
                     />
                     <button type='submit' onClick={handleSubmit} >
