@@ -1,9 +1,26 @@
 import './Login.css'
-import ParticlesBg from "particles-bg";
 import Button from '@material-ui/core/Button'
-
+import { auth, provider } from '../firebase';
+import { useStateValue } from '../StateProvider'
+import { actionTypes } from '../reducer'
 
 export default function Login() {
+    const [state, dispatch] = useStateValue()
+
+    const signIn = () => {
+        //sign in...
+        auth 
+          .signInWithPopup(provider)
+          .then(result => {
+              dispatch({ 
+                  type: actionTypes.SET_USER,
+                  user: result.user,
+              })
+          })
+          .catch(error => alert(error.message))
+    }
+
+    
     return (
         <div className="login">
 
@@ -15,7 +32,7 @@ export default function Login() {
                  <Button 
                   variant="contained" 
                   color='primary' 
-                  onClick='' 
+                  onClick={signIn} 
                   >Login with Google </Button>
             </div>
 

@@ -5,9 +5,11 @@ import Login from './components/Login';
 import Sidebar from './components/Sidebar';
 import Widgets from './components/Widgets';
 import ParticlesBg from "particles-bg";
+import { useStateValue } from './StateProvider'
+
 
 function App() {
-  const user = null;
+  const [{user}, dispatch] = useStateValue();
 
 
   return (

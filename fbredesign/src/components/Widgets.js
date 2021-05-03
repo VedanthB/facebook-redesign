@@ -11,6 +11,7 @@ function Widgets() {
              style={{border: 'none', overflow: 'hidden',}}
              scrolling='yes'
              frameborder='0'
+             title='linkedin'
              allowTransprancy='true'
              aloow='encrypted-media'
             ></iframe>
