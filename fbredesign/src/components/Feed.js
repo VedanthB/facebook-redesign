@@ -3,6 +3,7 @@ import MessageSender from './MessageSender'
 import Post from './Post'
 import Reels from './Reels'
 
+
 function Feed() {
     return (
         <div className='feed' >
@@ -29,6 +30,7 @@ function Feed() {
              username='snoopy'
              image='https://media.tenor.com/images/0a802a86fea0b9d02b6be9c8f160dd72/tenor.gif'
             />
+
         </div>
     )
 }
