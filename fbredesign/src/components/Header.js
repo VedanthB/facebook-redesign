@@ -5,15 +5,13 @@ import FlagIcon from '@material-ui/icons/Flag';
 import SubscriptionsOutlinedIcon from '@material-ui/icons/SubscriptionsOutlined'
 import StorefrontOutlinedIcon from '@material-ui/icons/StorefrontOutlined';
 import SupervisedUserCircleIcon from '@material-ui/icons/SupervisedUserCircle';
-import AddIcon from '@material-ui/icons/Add';
-import ForumIcon from '@material-ui/icons/Forum';
-import NotificationsActiveIcon from '@material-ui/icons/NotificationsActive';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import IconButton from '@material-ui/core/IconButton';
 import Avatar from '@material-ui/core/Avatar';
 import './Header.css'
+import { useStateValue } from '../StateProvider'
 
 function Header() {
+    const [{user}, dispatch] = useStateValue();
+      
     return (
         <div className='header'>
             <div className='header__left'>
@@ -48,11 +46,11 @@ function Header() {
 
             <div className='header__right'>
                 <div className='header__info'>
-                    <Avatar />
-                    <h4>name:name</h4>
+                    <Avatar src={user.photoURL} />
+                    <h4>{user.displayName} </h4>
                 </div>
 
-                <IconButton>
+                {/* <IconButton>
                     <AddIcon />
                 </IconButton>
                 <IconButton>
@@ -63,7 +61,7 @@ function Header() {
                 </IconButton>
                 <IconButton>
                     <ExpandMoreIcon />
-                </IconButton>
+                </IconButton> */}
             </div>
 
 
