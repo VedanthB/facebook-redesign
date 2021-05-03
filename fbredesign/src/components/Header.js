@@ -52,7 +52,7 @@ function Header() {
                     <h4>name:name</h4>
                 </div>
 
-                <IconButton>
+                {/* <IconButton>
                     <AddIcon />
                 </IconButton>
                 <IconButton>
@@ -63,7 +63,7 @@ function Header() {
                 </IconButton>
                 <IconButton>
                     <ExpandMoreIcon />
-                </IconButton>
+                </IconButton> */}
             </div>
 
 

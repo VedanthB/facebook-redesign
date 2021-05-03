@@ -2,7 +2,7 @@
     width: 100%;
     margin-top: 15px;
     border-radius: 15px;
-    background-color: rgb(129, 206, 129);
+    background-color :#503E50;
     box-shadow: 0px 5px 7px -7px rgba(0, 0, 0, 0.75);
 }
 
@@ -24,18 +24,20 @@
 
 .post__topInfo > h3 {
     font-size: medium;
+    color: white;
 
 }
 
 .post__topInfo > p {
     font-size: small;
-    color: rgb(71, 68, 68);
+    color: rgb(187, 187, 187);
 }
 
 .post__bottom {
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 15px 25px;
+    color: rgb(214, 207, 207);
 }
 
 .post__options {
@@ -57,12 +59,17 @@
     flex: 1;
 }
 
+.post__option > .MuiSvgIcon-root {
+    color: white;
+}
+
 
 .post__option > p {
     margin-left:  10px;
+    color: white;
 }
 
 .post__option:hover { 
-    background-color: rgb(96, 172, 96);
+    background-color: #292842;
     border-radius: 10px;
 }

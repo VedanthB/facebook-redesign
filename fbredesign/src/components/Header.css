@@ -5,7 +5,7 @@
     position: sticky;
     top: 0;
     z-index: 100;
-    background-color: white;
+    background-color:#000000;
     box-shadow: 0px 5px 8px -9px rgba(0,0,0,0.75);
 }
 
@@ -81,4 +81,20 @@
 
   .header__right {
       display: flex;
+      color: grey;
   }
+
+  .header__right > .MuiSvgIcon-root {
+      color: grey;
+  }
+
+  @media screen and (max-width:980px) {
+    .header__input {
+        display: none;
+    }
+    .header__info > h4 {
+        display: none;
+    }  
+  }
+
+ 
